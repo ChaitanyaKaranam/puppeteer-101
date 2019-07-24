@@ -1,0 +1,29 @@
+{
+  "name": "puppeteer-101",
+  "version": "1.0.0",
+  "description": "Getting Started with Puppeteer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaitanyaKaranam/puppeteer-101.git"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Node.js",
+    "Javascript"
+  ],
+  "author": "Chaitanya Karanam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChaitanyaKaranam/puppeteer-101/issues"
+  },
+  "homepage": "https://github.com/ChaitanyaKaranam/puppeteer-101#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^1.19.0"
+  }
+}
