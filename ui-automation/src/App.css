@@ -1,11 +1,38 @@
-.App {
-  text-align: center;
+body{
+  background-color: #263238;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header{
+  color: white;
+  padding: 2rem;
+  padding-bottom: 0rem;
+}
+
+.header>h4{
+  
+  align-items: center;
+  justify-content: center;
+  margin: 0rem;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+}
+
+.customForm{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
 }
 
 .App-header {
@@ -21,6 +48,16 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.card{
+  padding: 2rem;
+}
+
+pre{
+  padding: 2rem;
+  text-align: start;
+  overflow-x: auto;
 }
 
 @keyframes App-logo-spin {

@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import Form from './Form';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h3>Puppeteer Demo</h3>
+      <div className="header">
+        <h4>Puppeteer Demo</h4>
+      </div>
+      <Form/>
     </div>
   );
 }
