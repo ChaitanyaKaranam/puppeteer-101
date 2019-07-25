@@ -42,7 +42,7 @@ class Form extends Component {
                             firstName: "",
                             lastName: "",
                             email: "",
-                            message: "",
+                            // message: "",
                             submitted: false
                         })
                     }}>Clear</button>
