@@ -1,0 +1,1 @@
+all images are stored in this location

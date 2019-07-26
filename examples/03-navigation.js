@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false, slowMo: 300, args: ['--start-fullscreen'], defaultViewport: null})
+  const browser = await puppeteer.launch({ headless: false, slowMo: 100, args: ['--start-fullscreen'], defaultViewport: null})
   const page = await browser.newPage()
   
   const navigationPromise = page.waitForNavigation()
@@ -19,6 +19,8 @@ const puppeteer = require('puppeteer');
         page.waitForNavigation()
     ])
 
+  await page.waitFor(2000)
+
   await page.screenshot({ path: 'images/screenshot1.png'});
   
   await page.waitForSelector('.zWHNCf > div:nth-child(7) > .SFllF > .e20EGc > .ICsaqd')
@@ -27,6 +29,8 @@ const puppeteer = require('puppeteer');
         page.click('.zWHNCf > div:nth-child(7) > .SFllF > .e20EGc > .ICsaqd'),
         page.waitForNavigation()
     ])
+
+  await page.waitFor(2000)
 
   await page.screenshot({ path: 'images/screenshot2.png'});
   
@@ -37,6 +41,8 @@ const puppeteer = require('puppeteer');
         page.waitForNavigation()
     ])
 
+  await page.waitFor(2000)
+
   await page.screenshot({ path: 'images/screenshot3.png'});
   
   await page.waitForSelector('.zWHNCf > div:nth-child(9) > .SFllF > .e20EGc > .ICsaqd')
@@ -45,6 +51,8 @@ const puppeteer = require('puppeteer');
         page.click('.zWHNCf > div:nth-child(9) > .SFllF > .e20EGc > .ICsaqd'),
         page.waitForNavigation()
     ])
+
+  await page.waitFor(2000)
   
   await page.screenshot({ path: 'images/screenshot4.png'});
   
@@ -54,6 +62,8 @@ const puppeteer = require('puppeteer');
         page.click('.zWHNCf > div:nth-child(10) > .SFllF > .e20EGc > .ICsaqd'),
         page.waitForNavigation()
     ])
+
+  await page.waitFor(2000)
 
   await page.screenshot({ path: 'images/screenshot5.png'});
   

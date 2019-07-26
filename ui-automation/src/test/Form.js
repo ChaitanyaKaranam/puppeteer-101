@@ -88,6 +88,43 @@ beforeAll(async () => {
 
     }, 16000)
 
+
+    test('Integration testing between Submit and FormData', async () => {
+
+      await page.goto('http://localhost:3000/')
+      
+      await page.setViewport({ width: 1920, height: 969 })
+
+      await page.waitForSelector('.customForm > .row > .col > .card > input:nth-child(2)')
+      await page.click('.customForm > .row > .col > .card > input:nth-child(2)')
+      
+      await page.type('.customForm > .row > .col > .card > input:nth-child(2)', 'Krishna')
+
+      await page.type('.customForm > .row > .col > .card > input:nth-child(3)', 'chaitanya')     
+      
+      await page.type('.customForm > .row > .col > .card > .validate', 'k@test.com')    
+
+      await page.type('.customForm > .row > .col > .card > input:nth-child(5)', 'test')        
+              
+      await page.waitForSelector('.customForm > .row > .col > .card > .darken-4')
+
+      await page.click('.customForm > .row > .col > .card > .darken-4')
+
+      await page.waitForSelector('.customForm > .row > .col:nth-child(2)')
+
+      const firstName = await page.$eval('.customForm > .row > .col:nth-child(2) > .card > pre', el => el.textContent);
+
+      expect(firstName).toBe(JSON.stringify({
+        "firstName": "Krishna",
+        "lastName": "chaitanya",
+        "email": "k@test.com",
+        "message": "test"
+      }, null, 2))
+
+
+    }, 16000)
+
+
   })
 
   afterAll(() => {

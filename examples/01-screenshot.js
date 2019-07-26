@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
 
     await page.goto('https://news.google.com');
 
-    await page.screenshot({ path: 'screenshot.png'});
+    await page.screenshot({ path: 'images/screenshot.png'});
 
     await browser.close();
 
